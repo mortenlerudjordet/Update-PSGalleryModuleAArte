@@ -3,11 +3,11 @@
     This Azure Automation Runbook updates to the latest version of installed modules in Automation Account runtime environment from PowerShell Gallery.
     It can also only update the Azure modules by setting a parameter. This is meant to only run from an Automation account.
 
-    Use Import-GalleryModulesEnvAA to import modules to runtime environment in Automation account
+    Use Update-PSGalleryModuleAArte to update modules in a runtime environment in Automation account
 
 .DESCRIPTION
-    This Azure Automation Runbook imports the latest version from PowerShell Gallery of all modules in an
-    Automation account. By connecting the Runbook to an Automation schedule, you can ensure all modules in
+    This Azure Automation Runbook updates to the latest version from PowerShell Gallery of all modules in an
+    Automation Runtime Environment. By connecting the Runbook to an Automation schedule, you can ensure all modules in
     your Automation account stay up to date. Or only update the Azure modules
 
     NOTE:
