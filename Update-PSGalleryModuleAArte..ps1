@@ -13,6 +13,9 @@
     NOTE:
     This module can not be run locally as it uses system managed identity
 
+    Make sure to create an connection asset of the type AzureServicePrincipal and call it AzureRunAsConnection.
+    Only need to populate TenantId and SubscriptionId with real values, the other just set NA.
+
 .PARAMETER AutomationResourceGroupName
     Optional. The name of the Azure Resource Group containing the Automation account to update all modules for.
     If a resource group is not specified, then the logic will try to discover it by getting running jobs from automation accounts in the same sub
