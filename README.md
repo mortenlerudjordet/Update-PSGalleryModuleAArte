@@ -1,4 +1,4 @@
-# Update-PSGalleryModuleAArteRunbook
+# Update-PSGalleryModuleAArte
 
 This Azure Automation Runbook updates modules stored in a Azure Automation Runtime Environment from PowerShell Gallery.
 This is meant to only run from an Automation account with Runtime Environment activated.
