@@ -146,7 +146,7 @@ function Get-AutomationJob
         $ReturnJobs = @()
         $AzContext = Get-AzContext
         if( $AzContext  ) {
-            $AArtEnvURL = "https://management.azure.com/subscriptions/$($AzContext.Subscription.Id)/resourceGroups/$ResourceGroupName/providers/Microsoft.Automation/automationAccounts/$AutomationAccountName/jobs?api-version=2023-05-15-preview"
+            $AArtEnvURL = "https://management.azure.com/subscriptions/$($AzContext.Subscription.Id)/resourceGroups/$ResourceGroupName/providers/Microsoft.Automation/automationAccounts/$AutomationAccountName/jobs?api-version=2024-10-23"
 
             $Response = Invoke-AzRestMethod -Uri $AArtEnvURL -Method GET -ErrorAction Continue -ErrorVariable oErr
             if($oErr) {
@@ -244,10 +244,10 @@ function Get-RuntimeEnvAutomationModule
         $AzContext = Get-AzContext
         if( $AzContext  ) {
             if( $Name ) {
-                $AArtEnvURL = "https://management.azure.com/subscriptions/$($AzContext.Subscription.Id)/resourceGroups/$ResourceGroupName/providers/Microsoft.Automation/automationAccounts/$AutomationAccountName/runtimeEnvironments/$RuntimeEnvironmentName/packages/$($Name)?api-version=2023-05-15-preview"
+                $AArtEnvURL = "https://management.azure.com/subscriptions/$($AzContext.Subscription.Id)/resourceGroups/$ResourceGroupName/providers/Microsoft.Automation/automationAccounts/$AutomationAccountName/runtimeEnvironments/$RuntimeEnvironmentName/packages/$($Name)?api-version=2024-10-23"
             }
             else {
-                $AArtEnvURL = "https://management.azure.com/subscriptions/$($AzContext.Subscription.Id)/resourceGroups/$ResourceGroupName/providers/Microsoft.Automation/automationAccounts/$AutomationAccountName/runtimeEnvironments/$($RuntimeEnvironmentName)/packages?api-version=2023-05-15-preview"
+                $AArtEnvURL = "https://management.azure.com/subscriptions/$($AzContext.Subscription.Id)/resourceGroups/$ResourceGroupName/providers/Microsoft.Automation/automationAccounts/$AutomationAccountName/runtimeEnvironments/$($RuntimeEnvironmentName)/packages?api-version=2024-10-23"
             }
 
             $Response = Invoke-AzRestMethod -Uri $AArtEnvURL -Method GET -ErrorAction Continue -ErrorVariable oErr
@@ -338,7 +338,7 @@ function New-RuntimeEnvAutomationModule
         $CustomAArtEnvPackages = @()
         $AzContext = Get-AzContext
         if( $AzContext  ) {
-            $AArtEnvURL = "https://management.azure.com/subscriptions/$($AzContext.Subscription.Id)/resourceGroups/$ResourceGroupName/providers/Microsoft.Automation/automationAccounts/$AutomationAccountName/runtimeEnvironments/$RuntimeEnvironmentName/packages/$($Name)?api-version=2023-05-15-preview"
+            $AArtEnvURL = "https://management.azure.com/subscriptions/$($AzContext.Subscription.Id)/resourceGroups/$ResourceGroupName/providers/Microsoft.Automation/automationAccounts/$AutomationAccountName/runtimeEnvironments/$RuntimeEnvironmentName/packages/$($Name)?api-version=2024-10-23"
             $Payload = @{
                 "properties" = @{
                   "contentLink" = @{
